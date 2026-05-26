@@ -1,0 +1,20 @@
+node_modules/
+frontend/node_modules/
+backend/venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+dist/
+build/
+
+# Datos pesados
+data/*.csv
+
+# Backups locales
+backend_final*/
+frontend_final*/
+backend_estable*/
+frontend_estable*/
+backend_backup*/
+frontend_backup*/

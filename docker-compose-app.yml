@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: taller3-backend
+    ports:
+      - "${BACKEND_PORT}:8000"
+    environment:
+      DORIS_HOST: ${DORIS_HOST}
+      DORIS_PORT: ${DORIS_PORT}
+      DORIS_USER: ${DORIS_USER}
+      DORIS_PASSWORD: ${DORIS_PASSWORD}
+      DORIS_DATABASE: ${DORIS_DATABASE}
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: taller3-frontend
+    ports:
+      - "${FRONTEND_PORT}:5173"
+    depends_on:
+      - backend
